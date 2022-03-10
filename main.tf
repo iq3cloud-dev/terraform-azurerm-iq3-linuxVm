@@ -66,6 +66,10 @@ resource "azurerm_linux_virtual_machine" "virtual_machine" {
   }
 
   custom_data = var.custom_data
+
+  tags {
+    deploymentType = "terraform"
+  }
 }
 
 resource "azurerm_managed_disk" "data_disk" {
