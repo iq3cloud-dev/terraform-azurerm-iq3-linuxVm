@@ -67,7 +67,7 @@ resource "azurerm_linux_virtual_machine" "virtual_machine" {
 
   custom_data = var.custom_data
 
-  tags {
+  tags = {
     deploymentType = "terraform"
   }
 }
